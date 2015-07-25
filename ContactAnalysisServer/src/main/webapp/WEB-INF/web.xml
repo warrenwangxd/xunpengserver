@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app id="WebApp_ID" version="2.4" xmlns="http://java.sun.com/xml/ns/j2ee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
+	<display-name>xunpengpub</display-name>
+	
+	 <!-- sping conf start -->
+	<context-param>
+        <param-name>contextConfigLocation</param-name>
+        <param-value>classpath:applicationContext.xml</param-value>
+    </context-param>
+
+    <listener>
+        <listener-class>org.springframework.boot.legacy.context.web.SpringBootContextLoaderListener</listener-class>
+    </listener>
+<!--  
+    <filter>
+        <filter-name>metricFilter</filter-name>
+        <filter-class>org.springframework.web.filter.DelegatingFilterProxy</filter-class>
+    </filter>
+
+    <filter-mapping>
+        <filter-name>metricFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+    -->
+    <filter>
+<filter-name>encodingFilter </filter-name>
+<filter-class>
+org.springframework.web.filter.CharacterEncodingFilter
+</filter-class>
+<init-param>
+<param-name>encoding </param-name>
+<param-value>gbk</param-value>
+</init-param>
+<init-param>
+<param-name>forceEncoding </param-name>
+<param-value>true </param-value>
+</init-param>
+</filter>
+<filter-mapping>
+<filter-name>encodingFilter </filter-name>
+<url-pattern>*.action </url-pattern>
+</filter-mapping>
+<filter-mapping>
+<filter-name>encodingFilter</filter-name> 
+<url-pattern>*.jsp</url-pattern> 
+</filter-mapping> 
+<filter-mapping>
+<filter-name>encodingFilter</filter-name> 
+<url-pattern>*.html</url-pattern> 
+</filter-mapping> 
+    <servlet>
+        <servlet-name>appServlet</servlet-name>
+        <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+        <init-param>
+            <param-name>contextAttribute</param-name>
+            <param-value>org.springframework.web.context.WebApplicationContext.ROOT</param-value>
+        </init-param>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>appServlet</servlet-name>
+        <url-pattern>*.action</url-pattern>
+    </servlet-mapping>
+    
+    <!-- sping conf end -->
+	<servlet>
+		<display-name>UploadContactServlet</display-name>
+		<servlet-name>UploadContactServlet</servlet-name>
+		<servlet-class>com.warren.contact.server.UploadContactServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<display-name>CheckUpdateContactServlet</display-name>
+		<servlet-name>CheckUpdateContactServlet</servlet-name>
+		<servlet-class>com.warren.contact.server.CheckUpdateContactServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<display-name>GetALLContactsServlet</display-name>
+		<servlet-name>GetAllContactsServlet</servlet-name>
+		<servlet-class>com.warren.contact.server.GetAllContactsServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<display-name>UserRegisterServlet</display-name>
+		<servlet-name>UserRegisterServlet</servlet-name>
+		<servlet-class>com.warren.contact.server.user.RegisterServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<display-name>UserLoginServlet</display-name>
+		<servlet-name>UserLoginServlet</servlet-name>
+		<servlet-class>com.warren.contact.server.user.UserLoginServlet</servlet-class>
+	</servlet>
+		<servlet>
+		<display-name>SendVerifyCodeServlet</display-name>
+		<servlet-name>SendVerifyCodeServlet</servlet-name>
+		<servlet-class>com.warren.contact.server.user.SendVerifyCodeServlet</servlet-class>
+	</servlet>
+	
+		<servlet>
+		<display-name>FindSameContactServlet</display-name>
+		<servlet-name>FindSameContactServlet</servlet-name>
+		<servlet-class>com.warren.contact.server.FindSameContactServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<display-name>UpdateLocationServlet</display-name>
+		<servlet-name>UpdateLocationServlet</servlet-name>
+		<servlet-class>com.warren.contact.server.UpdateLocationServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<display-name>UploadUserImageServlet</display-name>
+		<servlet-name>UploadUserImageServlet</servlet-name>
+		<servlet-class>com.warren.contact.server.user.UploadUserImageServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<display-name>UserInfoModifyServlet</display-name>
+		<servlet-name>UserInfoModifyServlet</servlet-name>
+		<servlet-class>com.warren.contact.server.user.UserInfoModifyServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<display-name>UserInfoGetServlet</display-name>
+		<servlet-name>UserInfoGetServlet</servlet-name>
+		<servlet-class>com.warren.contact.server.user.UserInfoGetServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<display-name>GetFriendsLocationServlet</display-name>
+		<servlet-name>GetFriendsLocationServlet</servlet-name>
+		<servlet-class>com.warren.contact.server.GetFriendsLocationServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<display-name>UserAdminServlet</display-name>
+		<servlet-name>UserAdminServlet</servlet-name>
+		<servlet-class>com.warren.contact.server.admin.UserAdminServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<display-name>PhoneRawInfoAdminServlet</display-name>
+		<servlet-name>PhoneRawInfoAdminServlet</servlet-name>
+		<servlet-class>com.warren.contact.server.admin.PhoneRawInfoAdminServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<display-name>AdminLoginServlet</display-name>
+		<servlet-name>AdminLoginServlet</servlet-name>
+		<servlet-class>com.warren.contact.server.admin.AdminLoginServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<display-name>DataMockServlet</display-name>
+		<servlet-name>DataMockServlet</servlet-name>
+		<servlet-class>com.warren.contact.server.admin.DataMockServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>DataMockServlet</servlet-name>
+		<url-pattern>/dataMockServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>AdminLoginServlet</servlet-name>
+		<url-pattern>/adminLoginServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>PhoneRawInfoAdminServlet</servlet-name>
+		<url-pattern>/phoneRawInfoAdminServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>UserAdminServlet</servlet-name>
+		<url-pattern>/userAdminServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>GetFriendsLocationServlet</servlet-name>
+		<url-pattern>/getFriendsLocationServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>UserInfoGetServlet</servlet-name>
+		<url-pattern>/userInfoGetServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>UserInfoModifyServlet</servlet-name>
+		<url-pattern>/userInfoModifyServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>UploadUserImageServlet</servlet-name>
+		<url-pattern>/uploadUserImageServlet</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<display-name>UpdatePhoneInfo</display-name>
+		<servlet-name>UpdatePhoneInfo</servlet-name>
+		<servlet-class>com.warren.contact.server.UpdatePhoneInfoServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>UpdatePhoneInfo</servlet-name>
+		<url-pattern>/updatePhoneInfoServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>UpdateLocationServlet</servlet-name>
+		<url-pattern>/updateLocationServlet</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+		<servlet-name>FindSameContactServlet</servlet-name>
+		<url-pattern>/findSameContactServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>SendVerifyCodeServlet</servlet-name>
+		<url-pattern>/sendVerifyCodeServlet</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+		<servlet-name>UserLoginServlet</servlet-name>
+		<url-pattern>/userLoginServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>UserRegisterServlet</servlet-name>
+		<url-pattern>/userRegisterServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>UploadContactServlet</servlet-name>
+		<url-pattern>/UploadContactServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>CheckUpdateContactServlet</servlet-name>
+		<url-pattern>/checkUpdateContact</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>GetAllContactsServlet</servlet-name>
+		<url-pattern>/getAllContactsServlet</url-pattern>
+	</servlet-mapping>
+	
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+		<welcome-file>index.jsp</welcome-file>
+	</welcome-file-list>
+</web-app>

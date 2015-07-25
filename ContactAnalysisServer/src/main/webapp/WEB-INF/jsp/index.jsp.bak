@@ -1,0 +1,98 @@
+<!--
+Author: W3layouts
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+
+<!Doctype html>
+<html>
+<head>
+	<title>寻朋吧-http://www.xunpeng.pub</title>
+	<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+
+		<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+	<!-- for-mobile-apps -->
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="keywords" content="寻朋，搜朋，寻友，关系" />
+		
+
+</head>
+<body>
+<!-- banner -->
+<div class="banner">
+	<div class="container">
+		<div class="header">
+		   
+			<div class="logo">
+				<h1><img src="images/logo2.png">寻朋吧</h1>
+			</div>
+			
+			<div class="subtitle">
+				-发现朋友圈千丝万缕的关系
+				
+			</div>
+			<img src="qrcode.png"><font size="5" weight="900">扫描二维码</font>
+			
+			
+				
+           
+		
+		  
+			
+		</div>
+	</div>
+	
+</div>
+<!--body-->
+<table>
+<tr>
+  <td>
+  <div>
+<img src="images/network.jpg">
+  </div>
+  </td>
+   <td>
+      <table>
+        <tr>
+         
+<div class="intro-content">
+<h2>
+你知道手机通讯录中这么多朋友，哪些朋友是相互认识的吗?
+<br><br>想打麻将的时候，你知道手机联系人中哪些是离你最近的吗？
+<br><br>不小心删除了朋友的联系方式，想方便的找回来吗？
+<br><br>所有的这一切，尽在 <font color="red"><b>寻朋吧</b></font>
+</h2>
+</div>
+       
+     </tr>
+      <tr>
+	  <td class="intro-fuction"><img src="images/location.jpg"><br>查询朋友足迹</td>
+	  <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+	  <td class="intro-fuction"><img src="images/friends.jpg"><br>发现朋友关系</td>
+	  <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>	  
+	  <td class="intro-fuction"><img src="images/search.jpg"><br>寻找失联朋友</td>
+	  </tr>
+   </table>
+  </td>
+ </tr>
+</table>
+
+<!-- about-us -->
+<div id="about-us" class="about-us">
+<table>
+<tr>
+<td>
+	<div class="container">
+		<div class="about-info">
+			<h2>联系我们:<p>warrenwangxd@foxmail.com</p></h2>		
+		</div>
+	</div>
+</td>
+</tr>
+</table>		
+
+</div>
+</body>
+</html>
